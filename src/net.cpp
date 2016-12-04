@@ -977,7 +977,7 @@ static const char *strDNSSeed[][2] = {
     {"node2.trollpay.com", "node1.trollpay.com"},
     {"node3.trollpay.com", "node3.trollpay.com"},
     {"node4.trollpay.com", "node4.trollpay.com"},
-    {NULL, NULL}
+    {"node5.trollpay.com", "node5.trollpay.com"}
 };
 
 void ThreadDNSAddressSeed(void* parg)
