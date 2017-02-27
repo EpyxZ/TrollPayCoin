@@ -67,9 +67,9 @@ void OptionsModel::Init()
         if(fTestNet)
             settings.setValue("strThirdPartyTxUrls", "");
         else
-            settings.setValue("strThirdPartyTxUrls", "https://bitinfocharts.com/trollpaycoin/tx/%s|https://coinplorer.com/TPAY/Transactions/%s|https://explorer.novaco.in/tx/%s");
+            settings.setValue("strThirdPartyTxUrls", "http://tpay.trollpay.com/explorer/?%s|http://tpay.trollpay.com/explorer/?%s|http://tpay.trollpay.com/explorer/?%s");
     }
-    strThirdPartyTxUrls = settings.value("strThirdPartyTxUrls", "https://bitinfocharts.com/trollpaycoin/tx/%s|https://coinplorer.com/TPAY/Transactions/%s|https://explorer.novaco.in/tx/%s").toString();
+    strThirdPartyTxUrls = settings.value("strThirdPartyTxUrls", "http://tpay.trollpay.com/explorer/?%s|http://tpay.trollpay.com/explorer/?%s|http://tpay.trollpay.com/explorer/?%s").toString();
     fMinimizeToTray = settings.value("fMinimizeToTray", false).toBool();
     fMinimizeOnClose = settings.value("fMinimizeOnClose", false).toBool();
     fCoinControlFeatures = settings.value("fCoinControlFeatures", false).toBool();

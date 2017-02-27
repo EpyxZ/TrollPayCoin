@@ -93,7 +93,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     optionsDialog(0)
 {
     resize(850, 550);
-    setWindowTitle(tr("TrollPayCoin") + " - " + tr("Wallet"));
+    setWindowTitle(tr("TrollPlay") + " - " + tr("Wallet"));
     qApp->setStyleSheet("QMainWindow { background-image:url(:images/bkg);border:none; }"); // Added Background static background 11-9-16 TrollPay.com
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
@@ -249,7 +249,7 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send coins"), this);
-    sendCoinsAction->setToolTip(tr("Send coins to a TrollPayCoin address"));
+    sendCoinsAction->setToolTip(tr("Send coins to a TrollPlay address"));
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(sendCoinsAction);
@@ -301,7 +301,7 @@ void BitcoinGUI::createActions()
     quitAction->setStatusTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About TrollPayCoin"), this);
+    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About TrollPlay"), this);
     aboutAction->setStatusTip(tr("Show information about TrollPayCoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
 #if QT_VERSION < 0x050000
@@ -312,7 +312,7 @@ void BitcoinGUI::createActions()
     aboutQtAction->setStatusTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setStatusTip(tr("Modify configuration options for TrollPayCoin"));
+    optionsAction->setStatusTip(tr("Modify configuration options for TrollPlay"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Show / Hide"), this);
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
@@ -327,11 +327,11 @@ void BitcoinGUI::createActions()
     changePassphraseAction = new QAction(QIcon(":/icons/key"), tr("&Change Passphrase..."), this);
     changePassphraseAction->setStatusTip(tr("Change the passphrase used for wallet encryption"));
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your TrollPayCoin addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your TrollPlay addresses to prove you own them"));
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified TrollPayCoin addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified TrollPlay addresses"));
     secondAuthAction = new QAction(QIcon(":/icons/key"), tr("Second &auth..."), this);
-    secondAuthAction->setStatusTip(tr("Second auth with your TrollPayCoin addresses"));
+    secondAuthAction->setStatusTip(tr("Second auth with your TrollPlay addresses"));
 
     lockWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Lock wallet"), this);
     lockWalletAction->setStatusTip(tr("Lock wallet"));
@@ -584,7 +584,7 @@ void BitcoinGUI::setNumConnections(int count)
     default: icon = ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to TrollPayCoin network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to TrollPlay network", "", count));
 }
 
 void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
@@ -980,7 +980,7 @@ void BitcoinGUI::dropEvent(QDropEvent *event)
         if (nValidUrisFound)
             gotoSendCoinsPage();
         else
-            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid TrollPayCoin address or malformed URI parameters."));
+            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid TrollPlay address or malformed URI parameters."));
     }
 
     event->acceptProposedAction();
@@ -995,7 +995,7 @@ void BitcoinGUI::handleURI(QString strURI)
         gotoSendCoinsPage();
     }
     else
-        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid TrollPayCoin address or malformed URI parameters."));
+        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid TrollPlay address or malformed URI parameters."));
 }
 
 void BitcoinGUI::setEncryptionStatus(int status)

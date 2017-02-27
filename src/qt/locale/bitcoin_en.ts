@@ -6,8 +6,8 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="14"/>
-        <source>About TrollPayCoin</source>
-        <translation>About TrollPayCoin</translation>
+        <source>About TrollPlay</source>
+        <translation>About TrollPlay</translation>
     </message>
     <message>
         <location filename="../forms/aboutdialog.ui" line="56"/>
